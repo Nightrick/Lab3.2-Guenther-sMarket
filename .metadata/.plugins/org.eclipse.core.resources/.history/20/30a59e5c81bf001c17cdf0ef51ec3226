@@ -1,0 +1,16 @@
+
+public class GuenthersMarket {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome to Guenther's Market!");
+
+	}
+	
+	public static void printMenu() {
+		
+		
+		
+	}
+
+}

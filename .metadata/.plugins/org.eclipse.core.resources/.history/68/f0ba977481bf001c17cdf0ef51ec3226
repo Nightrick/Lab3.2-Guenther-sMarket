@@ -1,0 +1,25 @@
+
+public class GuenthersMarket {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Welcome to Guenther's Market!");
+		printMenu();
+
+	}
+	
+	public static void printMenu() {
+		
+		System.out.println("Item             Price");
+		System.out.println("=======================");
+		System.out.println("1. apple         $0.99");
+		System.out.println("2. banana        $0.59");
+		System.out.println("3. ground beef   $5.60");
+		System.out.println("4. pita bread    $2.75");
+		System.out.println("5. pickles       $1.25");
+		System.out.println("6. onion         $0.89");
+		System.out.println("7. carrots       $0.93");
+		System.out.println("8. beets         $1.13");
+	}
+
+}
