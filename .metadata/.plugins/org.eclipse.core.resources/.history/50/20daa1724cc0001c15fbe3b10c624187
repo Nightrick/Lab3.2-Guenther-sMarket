@@ -18,7 +18,6 @@ public class GuenthersMarket {
 		System.out.println("");
 		
 		do {
-		continueToShopValid = true;
 		printMenu();
 		shopperItemSelection = orderSelection();
 		
