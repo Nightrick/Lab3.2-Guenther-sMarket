@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,20 +10,9 @@ public class GuenthersMarket {
 		String continueToShop = "";
 		boolean continueToShopValid = true;
 		int shopperItemSelection;
-		double totalCost = 0.00;
 		
 		ArrayList<String> shoppingCartItems = new ArrayList<>();
 		ArrayList<Double> shoppingCartCost = new ArrayList<>();
-		HashMap<String, String> menuItems = new HashMap<>();
-		
-		menuItems.put("apple", "      $0.99");
-		menuItems.put("banana", "     $0.59");
-		menuItems.put("ground beef", "$5.60");
-		menuItems.put("pita bread", " $2.75");
-		menuItems.put("pickles", "    $1.25");
-		menuItems.put("onion", "      $0.89");
-		menuItems.put("carrots", "    $0.93");
-		menuItems.put("beets", "      $1.13");
 		
 		System.out.println("Welcome to Guenther's Market!");
 		System.out.println("");
@@ -89,27 +77,9 @@ public class GuenthersMarket {
 		
 		} while (continueToShop.equals("y"));
 		
-		
-		for (int i = 0; i < shoppingCartCost.size(); i++) {
-			totalCost += shoppingCartCost.get(i);
-		}
-		
 		System.out.println("You added the following items to your cart: ");
-		
-		for(int i = 0; i < shoppingCartItems.size(); i++) {
-			System.out.print(shoppingCartItems.get(i) + " ");
-			System.out.print("$" +shoppingCartCost.get(i));
-			System.out.println();
-		}
-		
-		//System.out.println(shoppingCartItems.toString());
-		//System.out.println(shoppingCartCost.toString());
-		highestCost(shoppingCartCost, shoppingCartItems);
-		lowestCost(shoppingCartCost, shoppingCartItems);
-		System.out.println("Your average cost per item is: $" + averageCost(shoppingCartCost));
-		System.out.println("Your total cost is: $" + totalCost);
-		System.out.println("Congratulations! There's no tax on this order because that's outside the scope of this build!");
-		System.out.println("Thanks for shopping at Guenther's Market! Y'all come back now!");
+		System.out.println(shoppingCartItems.toString());
+		System.out.println(shoppingCartCost.toString());
 
 	}
 	
@@ -153,53 +123,6 @@ public class GuenthersMarket {
 		}
 		return userSelection;
 	}
-	
-	public static double averageCost(ArrayList<Double> shoppingCartTotal) {
-		
-		double totalCost = 0.00;
-		
-		for (int i = 0; i < shoppingCartTotal.size(); i++) {
-			totalCost += shoppingCartTotal.get(i);
-		}
-		
-		double averageCost = totalCost / shoppingCartTotal.size();
-		
-		return averageCost;
-	}
-	
-	public static void highestCost(ArrayList<Double> shoppingCartTotal, ArrayList<String> shoppingCartItem) {
-		
-		double highestPrice = 0.00;
-		String itemName = "";
-		
-		for (int i = 0; i < shoppingCartTotal.size(); i++) {
-			if(shoppingCartTotal.get(i) > highestPrice) {
-				highestPrice = shoppingCartTotal.get(i);
-				itemName = shoppingCartItem.get(i);
-			}
-		}
-		
-		System.out.println("Your highest priced item was " + itemName + ": $" + highestPrice);
-		
-	}
-	
-	public static void lowestCost(ArrayList<Double> shoppingCartTotal, ArrayList<String> shoppingCartItem) {
-		
-		double lowestPrice = 5.60;
-		String itemName = "";
-		
-		for (int i = 0; i < shoppingCartTotal.size(); i++) {
-			if(shoppingCartTotal.get(i) < lowestPrice) {
-				lowestPrice = shoppingCartTotal.get(i);
-				itemName = shoppingCartItem.get(i);
-			}
-		}
-		
-		System.out.println("Your lowest priced item was " + itemName + ": $" + lowestPrice);
-		
-	}
-	
-	
 	
 
 }

@@ -97,9 +97,7 @@ public class GuenthersMarket {
 		System.out.println("You added the following items to your cart: ");
 		
 		for(int i = 0; i < shoppingCartItems.size(); i++) {
-			System.out.print(shoppingCartItems.get(i) + " ");
-			System.out.print("$" +shoppingCartCost.get(i));
-			System.out.println();
+			System.out.println(menuItems.get(shoppingCartItems.get(i)));
 		}
 		
 		//System.out.println(shoppingCartItems.toString());

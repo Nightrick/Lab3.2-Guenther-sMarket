@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,16 +14,6 @@ public class GuenthersMarket {
 		
 		ArrayList<String> shoppingCartItems = new ArrayList<>();
 		ArrayList<Double> shoppingCartCost = new ArrayList<>();
-		HashMap<String, String> menuItems = new HashMap<>();
-		
-		menuItems.put("apple", "      $0.99");
-		menuItems.put("banana", "     $0.59");
-		menuItems.put("ground beef", "$5.60");
-		menuItems.put("pita bread", " $2.75");
-		menuItems.put("pickles", "    $1.25");
-		menuItems.put("onion", "      $0.89");
-		menuItems.put("carrots", "    $0.93");
-		menuItems.put("beets", "      $1.13");
 		
 		System.out.println("Welcome to Guenther's Market!");
 		System.out.println("");
@@ -98,12 +87,11 @@ public class GuenthersMarket {
 		
 		for(int i = 0; i < shoppingCartItems.size(); i++) {
 			System.out.print(shoppingCartItems.get(i) + " ");
-			System.out.print("$" +shoppingCartCost.get(i));
-			System.out.println();
+			System.out.print(shoppingCartCost.get(i));
 		}
 		
-		//System.out.println(shoppingCartItems.toString());
-		//System.out.println(shoppingCartCost.toString());
+		System.out.println(shoppingCartItems.toString());
+		System.out.println(shoppingCartCost.toString());
 		highestCost(shoppingCartCost, shoppingCartItems);
 		lowestCost(shoppingCartCost, shoppingCartItems);
 		System.out.println("Your average cost per item is: $" + averageCost(shoppingCartCost));

@@ -102,8 +102,8 @@ public class GuenthersMarket {
 			System.out.println();
 		}
 		
-		//System.out.println(shoppingCartItems.toString());
-		//System.out.println(shoppingCartCost.toString());
+		System.out.println(shoppingCartItems.toString());
+		System.out.println(shoppingCartCost.toString());
 		highestCost(shoppingCartCost, shoppingCartItems);
 		lowestCost(shoppingCartCost, shoppingCartItems);
 		System.out.println("Your average cost per item is: $" + averageCost(shoppingCartCost));
